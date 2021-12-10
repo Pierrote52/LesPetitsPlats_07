@@ -1,0 +1,71 @@
+#searchInput{
+    height: 2rem;
+    background-color:rgba(231, 231, 231, 1);
+    padding: 3%;
+    border-width: 0ch;
+
+}
+#ingredients{
+    color:white;
+    opacity: 1;
+    
+}
+#ingredients::placeholder {
+    color:white;
+    opacity: 1;
+    }
+#Appareil{
+    color:white;
+    opacity: 1;
+    
+}
+#Appareil::placeholder {
+    color:white;
+    opacity: 1;
+    }
+
+#Ustensiles{
+    color:white;
+    opacity: 1;
+    
+}
+#Ustensiles::placeholder {
+    color:white;
+    opacity: 1;
+    }
+article{ 
+        font-size:0.6rem;
+        margin-top: 2em;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: rgba(231, 231, 231, 1);
+;
+        .image{
+            background-color:grey ;
+            height: 14em;
+            
+        }
+        .titreEtTemps{
+            p{
+            font-size: 1rem;
+            font-weight: bold;
+            }
+            padding: 5%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .row{
+            padding: 5%;
+            ul{
+                padding-left: 0ch;
+                list-style-type: none;
+                li{
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        
+    }

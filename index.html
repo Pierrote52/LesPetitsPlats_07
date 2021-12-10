@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="./Scss/style.css">
+    <link rel ="stylesheet" href="Scss/custom/style.css">
     <title>Les petits plats</title>
 
   </head>
@@ -22,28 +23,47 @@
         </div>
         <div class="row mb-3">
             <div class="col">
-               <input class="form-control" id="searchInput" type="text" placeholder="Search..">
+               <input class="form-control" id="searchInput" type="text" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
             </div>
          </div>
         <div class="row">
             <div class="col-2">
-                <button class="btn btn-primary" type="button">Ingredients</button>
+                <input class="form-control bg-primary " type="text" name="Ingredients" placeholder="Ingredients" id="ingredients">
             </div>
             <div class="col-2">
-                <button class="btn btn-success" type="button">Ingredients</button>
+                 <input class="form-control bg-success" type="text" name="Appareil" id="Appareil" placeholder="Appareil">
             </div>
             <div class="col-2">
-                <button class="btn btn-danger" type="button">Ingredients</button>
+                <input class="form-control bg-danger" type="text" name="Ustensiles" id="Ustensiles" placeholder="Ustensiles">
             </div>
+           
             
         </div>
-        <div class="row">
-            <div class="col-3"></div>
+        <div id="section" class="row">
+                <div class="col-4">
+                    <article class="vignette">
+                        <div class="image"></div>
+                        <div class="titreEtTemps"><p>Limonade</p><p>10min</p></div>
+                        <div class="row">
+                            <div class="col-6">
+                            <ul>
+                                <li><span>Ingredients:</span>400ml</li>
+                                <li><span>Jus de citron:</span> 2</li>
+                                <li><span>Créme de coco:</span> 4 cuillères</li>
+                                <li><span>Sucre:</span> 20g</li>
+                                <li><span>Glaçons:</span> 2</li>
+                            </ul>    
+                            </div>
+                            <div class="col-6">
+                                <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+                
         </div>
     </div>
-        
-        
-
 
     </div>
    

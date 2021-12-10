@@ -1,0 +1,123 @@
+#searchInput {
+  height: 2rem;
+  background-color: #e7e7e7;
+  padding: 3%;
+  border-width: 0ch;
+}
+
+#ingredients {
+  color: white;
+  opacity: 1;
+}
+
+#ingredients::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#ingredients:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#ingredients::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#ingredients::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Appareil {
+  color: white;
+  opacity: 1;
+}
+
+#Appareil::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Appareil:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Appareil::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Appareil::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Ustensiles {
+  color: white;
+  opacity: 1;
+}
+
+#Ustensiles::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Ustensiles:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Ustensiles::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#Ustensiles::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+article {
+  font-size: 0.6rem;
+  margin-top: 2em;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #e7e7e7;
+}
+
+article .image {
+  background-color: grey;
+  height: 14em;
+}
+
+article .titreEtTemps {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article .titreEtTemps p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+article .row {
+  padding: 5%;
+}
+
+article .row ul {
+  padding-left: 0ch;
+  list-style-type: none;
+}
+
+article .row ul li span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
