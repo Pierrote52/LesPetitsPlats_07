@@ -2,12 +2,15 @@ import { recipesArray } from "../JSON/recipes.js";
 import { createRecipe } from "./service/createRecipe.js";
 import { checkAllFiltersValue } from "./service/checkFilters.js";
 import { displayVignettes } from "./service/displayVignettes.js";
+import { createButtons } from "./service/createButtons.js";
+import { ifNotFound } from "./service/notFound.js";
 
 var saisieGenerale = document.getElementById("searchInput");
 var saisieIngredients = document.getElementById("ingredients");
 var saisieAppareil = document.getElementById("Appareil");
 var saisieUstensiles = document.getElementById("Ustensiles");
 var listeDesElements = document.getElementById('listeDesElements');
+let colone = document.getElementById('coloneElements');
 export var section = document.getElementById("section");
 //Liste des objets de la liste. 
 var listeRecipes = [];
@@ -45,21 +48,17 @@ for(let i=0; i<recipesArray.length; i++){
 console.log(listeDesUstensiles)
 
 displayVignettes(listeRecipes);
-//affiche les vignettes présentent dans la liste liste.
-
-
-
-
-
-
 // Quand un element est modifier saisie dans la grande barre de recherche.
 saisieGenerale.addEventListener('keyup', function(v){
     //Plus de 3 caractères ? 
     if(v.target.value.length >=3){
+
         console.log(v.target.value);
         //Ici nous envoyons la valeur saisie , ainsi que la liste à tester. 
         currentListe=[];
         checkAllFiltersValue(v.target.value, listeRecipes);
+        ifNotFound();
+        
     }else {
         displayVignettes(listeRecipes);
     }
@@ -68,19 +67,34 @@ saisieGenerale.addEventListener('keyup', function(v){
 
 //Declanche un evenement quand le champ ingredient est focus. 
 saisieIngredients.addEventListener('focusin', function(){
-    
+
     listeDesElements.style.background = "dodgerblue";
-    let colone = document.getElementById('coloneElements');
-    //Faire une boucle pour creer et appenchild a la colone les elements ingredients de la liste des ingredients. 
-    for(let ingredient of listeDesIngredients){
-        let button = document.createElement("BUTTON");
-        button.innerHTML = ingredient;
-        button.className= "col-3";
-        colone.appendChild(button)
-    }
+    createButtons(listeDesIngredients);
     listeDesElements.style.height = colone.offsetHeight + "px";
 });
 saisieIngredients.addEventListener('focusout', function(){
+    listeDesElements.style.height = "0";
+    listeDesElements.style.background = "transparent"
+    
+});
+saisieAppareil.addEventListener('focusin', function(){
+
+    listeDesElements.style.background = "green";
+    createButtons(listeDesAppareils);
+    listeDesElements.style.height = colone.offsetHeight + "px";
+});
+saisieAppareil.addEventListener('focusout', function(){
+    listeDesElements.style.height = "0";
+    listeDesElements.style.background = "transparent"
+    
+});
+saisieUstensiles.addEventListener('focusin', function(){
+
+    listeDesElements.style.background = "red";
+    createButtons(listeDesUstensiles);
+    listeDesElements.style.height = colone.offsetHeight + "px";
+});
+saisieUstensiles.addEventListener('focusout', function(){
     listeDesElements.style.height = "0";
     listeDesElements.style.background = "transparent"
     
