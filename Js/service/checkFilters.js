@@ -1,5 +1,6 @@
 
-import{currentListe, displayVignettes} from "../main.js"
+import{currentListe} from "../main.js";
+import { displayVignettes } from "./displayVignettes.js";
 
 
 export function checkAllFiltersValue(value, liste){
@@ -17,4 +18,17 @@ export function checkAllFiltersValue(value, liste){
         }
     }
     displayVignettes(currentListe);
+}
+
+export function checkIngredientsValue(value, liste){
+    //Cette fonction contrôle la liste avec le parametre ingredient. 
+
+}
+export function checkAppareilValue(value, liste){
+    //Cette fonction contrôle la liste avec le parametre Appareil. 
+
+}
+export function checkUstensilesValue(value, liste){
+    //Cette fonction contrôle la liste avec le parametre Ustensiles. 
+
 }

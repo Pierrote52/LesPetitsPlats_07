@@ -1,3 +1,4 @@
+
 #searchInput{
     height: 2rem;
     background-color:rgba(231, 231, 231, 1);
@@ -8,7 +9,28 @@
 #ingredients{
     color:white;
     opacity: 1;
+    background-color:dodgerblue;
+    &:focus + #listeDesElements{
+        height: 7rem;
+    }
     
+}
+#listeDesElements{
+    position:relative;
+    height: 0rem;
+    background-color: transparent;
+    transition: all 1000ms;
+    overflow: hidden;
+    border-radius: 10px;
+    .col{ 
+        position:absolute;
+        button{
+            margin-right: 5%;
+            border: none;
+            background-color: transparent;
+            color: ghostwhite;
+        }
+    }
 }
 #ingredients::placeholder {
     color:white;
