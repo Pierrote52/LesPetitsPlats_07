@@ -28,4 +28,12 @@ export function initState(){
         
        
     }
+    let focuses = document.getElementsByTagName('input');
+    for(let focus of focuses){
+        focus.addEventListener('focusout', function(){
+            listeDesElements.style.height = "0";
+            listeDesElements.style.background = "transparent"
+
+        })
+    }
 }

@@ -22,9 +22,9 @@ export var listeDesAppareils = [];
 
 //CurentListe la liste. 
 export var currentListe = [];
-var currentFiltreIngredients =[];
-var currrentFiltreUstensiles = [];
-var currentFiltreAppareils = [];
+export var currentFiltreIngredients =[];
+export var currrentFiltreUstensiles = [];
+export var currentFiltreAppareils = [];
 
 initState();
 
@@ -53,30 +53,17 @@ saisieIngredients.addEventListener('focusin', function(){
     createButtons(listeDesIngredients);
     listeDesElements.style.height = colone.offsetHeight + "px";
 });
-saisieIngredients.addEventListener('focusout', function(){
-    listeDesElements.style.height = "0";
-    listeDesElements.style.background = "transparent"
-    
-});
+
 saisieAppareil.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "green";
     createButtons(listeDesAppareils);
     listeDesElements.style.height = colone.offsetHeight + "px";
 });
-saisieAppareil.addEventListener('focusout', function(){
-    listeDesElements.style.height = "0";
-    listeDesElements.style.background = "transparent"
-    
-});
+
 saisieUstensiles.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "red";
     createButtons(listeDesUstensiles);
     listeDesElements.style.height = colone.offsetHeight + "px";
 });
-saisieUstensiles.addEventListener('focusout', function(){
-    listeDesElements.style.height = "0";
-    listeDesElements.style.background = "transparent"
-    
-})
