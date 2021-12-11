@@ -4,6 +4,7 @@ import { checkAllFiltersValue } from "./service/checkFilters.js";
 import { displayVignettes } from "./service/displayVignettes.js";
 import { createButtons } from "./service/createButtons.js";
 import { ifNotFound } from "./service/notFound.js";
+import { initState } from "./service/initState.js";
 
 var saisieGenerale = document.getElementById("searchInput");
 var saisieIngredients = document.getElementById("ingredients");
@@ -12,40 +13,20 @@ var saisieUstensiles = document.getElementById("Ustensiles");
 var listeDesElements = document.getElementById('listeDesElements');
 let colone = document.getElementById('coloneElements');
 export var section = document.getElementById("section");
-//Liste des objets de la liste. 
-var listeRecipes = [];
-var listeDesIngredients =[];
-var listeDesUstensiles = [];
-var listeDesAppareils = [];
+
+//Liste des objets de la liste à l'état initial.
+export var listeRecipes = [];
+export var listeDesIngredients =[];
+export var listeDesUstensiles = [];
+export var listeDesAppareils = [];
 
 //CurentListe la liste. 
-export var currentListe = []
+export var currentListe = [];
+var currentFiltreIngredients =[];
+var currrentFiltreUstensiles = [];
+var currentFiltreAppareils = [];
 
-for(let i=0; i<recipesArray.length; i++){
-    var recipe = createRecipe(recipesArray[i][1]);
-    listeRecipes.push(recipe);
-    //Ajoute les ingredients à la liste liste des ingredients.
-    for(let ingredient of recipe.ingredients){
-        if(!listeDesIngredients.includes(ingredient.ingredient)){
-            listeDesIngredients.push(ingredient.ingredient)
-        }
-    }
-    //Ajoute les appareils(four, blender, ect...) à la liste.  .
-    if(!listeDesAppareils.includes(recipe.appliance)){
-            listeDesAppareils.push(recipe.appliance)
-    }
-    for(let ustenssils of recipe.ustensils){
-        if(!listeDesUstensiles.includes(ustenssils)){
-            listeDesUstensiles.push(ustenssils)        
-        }
-
-    }
-    
-    
-    
-   
-}
-console.log(listeDesUstensiles)
+initState();
 
 displayVignettes(listeRecipes);
 // Quand un element est modifier saisie dans la grande barre de recherche.
