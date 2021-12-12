@@ -35,7 +35,7 @@ export function checkUstensilesValue(value, liste){
 
 }
 
-//cette fonction va chercher si un ingredient,correspond à la liste demandée. 
+//Cette fonction va chercher si un ingredient,correspond à la liste demandée. 
 export function filtreIngredients(value, liste){
     let _currentList = [];
     for(let elemnt of liste){
@@ -44,7 +44,7 @@ export function filtreIngredients(value, liste){
         for(let i=0; i<nombredelettres;i++){
             
             if(value[i]==elemnt[i]&& !_currentList.includes(elemnt)&&error==false){
-                console.log('it\'s a match' + elemnt);
+       
             }else{
                 error=true;
             }
@@ -58,7 +58,7 @@ export function filtreIngredients(value, liste){
     return _currentList;
 }
 
-export function createFiltreForDisplay(v, _listeDesIngredients){
+export function createFiltreForDisplay(v, _listeDesIngredients,elementsName){
     createButtons([]);
     let value = v.target.value;
     let _currentList = filtreIngredients(value, _listeDesIngredients);

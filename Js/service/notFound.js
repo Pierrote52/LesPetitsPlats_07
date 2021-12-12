@@ -6,7 +6,7 @@ import { section } from "../main.js";
 export function ifNotFound(){
     if(section.innerHTML==""){
     let message = document.createElement("p");
-    message.innerHTML = "Auccune recette trouvée... ";
+    message.innerHTML = "Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson»";
     section.appendChild(message);
 
 }}

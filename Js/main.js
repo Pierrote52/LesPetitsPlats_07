@@ -6,6 +6,7 @@ import { ifNotFound } from "./service/notFound.js";
 import { initState } from "./service/initState.js";
 import { reciseCurrentListeElement } from "./service/recizeCurrentList.js";
 import { createFiltreForDisplay } from "./service/checkFilters.js";
+import { elementsName } from "./models/elementsName.js";
 
 var saisieGenerale = document.getElementById("searchInput");
 var saisieIngredients = document.getElementById("ingredients");
@@ -23,9 +24,12 @@ export var listeDesAppareils = [];
 
 //CurentListe la liste d'éléments proposées dnas la fenetre en bas des choix. 
 export var currentListe = [];
-export var currentFiltreIngredients =[];
-export var currrentFiltreUstensiles = [];
-export var currentFiltreAppareils = [];
+export var currentIngredients =[];
+export var currrentUstensiles = [];
+export var currentAppareils = [];
+
+//Creer des objets models pour aide de saisie. 
+var name=new elementsName();
 
 initState();
 
@@ -34,8 +38,6 @@ displayVignettes(listeRecipes);
 saisieGenerale.addEventListener('keyup', function(v){
     //Plus de 3 caractères ? 
     if(v.target.value.length >=3){
-
-        console.log(v.target.value);
         //Ici nous envoyons la valeur saisie , ainsi que la liste à tester. 
         currentListe=[];
         checkAllFiltersValue(v.target.value, listeRecipes);
@@ -71,13 +73,15 @@ saisieUstensiles.addEventListener('focusin', function(){
 
 //Déclanche un evenement quand l'utilisateur saisie des lettres dans le champs. 
 saisieIngredients.addEventListener('keyup', function(v){
-    createFiltreForDisplay(v, listeDesIngredients);
+  
+    console.log(name.ingredient)
+    createFiltreForDisplay(v, listeDesIngredients, name.ingredient);
 
 });
 saisieAppareil.addEventListener('keyup', function(v){
-    createFiltreForDisplay(v, listeDesAppareils);
+    createFiltreForDisplay(v, listeDesAppareils, name.appareils);
 
 });
 saisieUstensiles.addEventListener('keyup', function(v){
-        createFiltreForDisplay(v,listeDesUstensiles)
+        createFiltreForDisplay(v,listeDesUstensiles, name.ustensiles)
 });
