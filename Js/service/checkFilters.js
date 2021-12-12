@@ -62,7 +62,7 @@ export function createFiltreForDisplay(v, _listeDesIngredients,elementsName){
     createButtons([]);
     let value = v.target.value;
     let _currentList = filtreIngredients(value, _listeDesIngredients);
-    createButtons(_currentList);
+    createButtons(_currentList, elementsName);
     reciseCurrentListeElement();
 
 }

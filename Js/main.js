@@ -53,21 +53,21 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
-    createButtons(listeDesIngredients);
+    createButtons(listeDesIngredients,name.ingredient);
     reciseCurrentListeElement();
 });
 
 saisieAppareil.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "green";
-    createButtons(listeDesAppareils);
+    createButtons(listeDesAppareils, name.appareils);
     reciseCurrentListeElement();
 });
 
 saisieUstensiles.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "red";
-    createButtons(listeDesUstensiles);
+    createButtons(listeDesUstensiles, name.ustensiles);
     reciseCurrentListeElement();
 });
 

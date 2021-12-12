@@ -5,6 +5,16 @@
   border-width: 0ch;
 }
 
+.ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
 #ingredients {
   color: white;
   opacity: 1;
