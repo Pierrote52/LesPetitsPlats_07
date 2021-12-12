@@ -2,7 +2,7 @@ import { recipesArray } from "../../JSON/recipes.js";
 import { createRecipe } from "./createRecipe.js";
 import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles}from "../main.js";
 
-
+//Cette fonction initialise les variables et les valeurs par defaut dans l'app. 
 export function initState(){
     for(let i=0; i<recipesArray.length; i++){
         var recipe = createRecipe(recipesArray[i][1]);

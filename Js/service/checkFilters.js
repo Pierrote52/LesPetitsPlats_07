@@ -1,6 +1,8 @@
 
 import{currentListe} from "../main.js";
 import { displayVignettes } from "./displayVignettes.js";
+import { createButtons } from "./createButtons.js";
+import { reciseCurrentListeElement } from "./recizeCurrentList.js";
 
 
 export function checkAllFiltersValue(value, liste){
@@ -21,7 +23,7 @@ export function checkAllFiltersValue(value, liste){
 }
 
 export function checkIngredientsValue(value, liste){
-    //Cette fonction contrôle la liste avec le parametre ingredient. 
+    
 
 }
 export function checkAppareilValue(value, liste){
@@ -30,5 +32,37 @@ export function checkAppareilValue(value, liste){
 }
 export function checkUstensilesValue(value, liste){
     //Cette fonction contrôle la liste avec le parametre Ustensiles. 
+
+}
+
+//cette fonction va chercher si un ingredient,correspond à la liste demandée. 
+export function filtreIngredients(value, liste){
+    let _currentList = [];
+    for(let elemnt of liste){
+        let nombredelettres = value.length;
+        let error=false;
+        for(let i=0; i<nombredelettres;i++){
+            
+            if(value[i]==elemnt[i]&& !_currentList.includes(elemnt)&&error==false){
+                console.log('it\'s a match' + elemnt);
+            }else{
+                error=true;
+            }
+
+        }
+    if(error==false){
+        _currentList.push(elemnt)
+    }
+
+    }
+    return _currentList;
+}
+
+export function createFiltreForDisplay(v, _listeDesIngredients){
+    createButtons([]);
+    let value = v.target.value;
+    let _currentList = filtreIngredients(value, _listeDesIngredients);
+    createButtons(_currentList);
+    reciseCurrentListeElement();
 
 }
