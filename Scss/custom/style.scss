@@ -7,11 +7,79 @@
 
 }
 .ingredient{
+    margin-left: 1%;
     display: flex;
+    justify-content: space-between;
     background-color: dodgerblue;
     color:white;
     border-radius: 5px;
     text-align: center;
+    button{
+        border-width: 0;
+        background-color: transparent;
+        width: 2.5em;
+        margin-right: 0em;
+        img{
+            width: 100%;
+        }
+    }
+    p{
+        margin-top: auto;
+        margin-bottom: auto;
+        white-space: nowrap;
+        overflow: hidden;
+       
+    }
+}
+.appareils{
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    color:white;
+    border-radius: 5px;
+    text-align: center;
+    button{
+        border-width: 0;
+        background-color: transparent;
+        width: 2.5em;
+        margin-right: 0em;
+        img{
+            width: 100%;
+        }
+    }
+    p{
+        margin-top: auto;
+        margin-bottom: auto;
+        white-space: nowrap;
+        overflow: hidden;
+       
+    }
+}
+.ustensils{
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(220, 53, 69);
+    color:white;
+    border-radius: 5px;
+    text-align: center;
+    button{
+        border-width: 0;
+        background-color: transparent;
+        width: 2.5em;
+        margin-right: 0em;
+        img{
+            width: 100%;
+        }
+    }
+    p{
+        margin-top: auto;
+        margin-bottom: auto;
+        white-space: nowrap;
+        overflow: hidden;
+       
+    }
 }
 #ingredients{
     color:white;

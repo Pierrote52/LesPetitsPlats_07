@@ -6,13 +6,99 @@
 }
 
 .ingredient {
+  margin-left: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: dodgerblue;
   color: white;
   border-radius: 5px;
   text-align: center;
+}
+
+.ingredient button {
+  border-width: 0;
+  background-color: transparent;
+  width: 2.5em;
+  margin-right: 0em;
+}
+
+.ingredient button img {
+  width: 100%;
+}
+
+.ingredient p {
+  margin-top: auto;
+  margin-bottom: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.appareils {
+  margin-left: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.appareils button {
+  border-width: 0;
+  background-color: transparent;
+  width: 2.5em;
+  margin-right: 0em;
+}
+
+.appareils button img {
+  width: 100%;
+}
+
+.appareils p {
+  margin-top: auto;
+  margin-bottom: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ustensils {
+  margin-left: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ustensils button {
+  border-width: 0;
+  background-color: transparent;
+  width: 2.5em;
+  margin-right: 0em;
+}
+
+.ustensils button img {
+  width: 100%;
+}
+
+.ustensils p {
+  margin-top: auto;
+  margin-bottom: auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #ingredients {
