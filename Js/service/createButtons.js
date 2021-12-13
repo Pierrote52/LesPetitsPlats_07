@@ -1,6 +1,7 @@
 import { currentAppareilsFilters,currrentUstensilesFilters, currentIngredientsFilters} from "../main.js";
 import { elementsName } from "../models/elementsName.js";
 import { displayVignettesFilters } from "./displayVignettesFilters.js";
+import { filtreCurrentListeWithFilter } from "./filtreCurrentListeWithFilter.js";
 
 
 
@@ -17,6 +18,7 @@ export function createButtons(liste, cathElement){
             console.log(element + " " + cathElement);
             addToHisList(element, cathElement);
             displayVignettesFilters();
+            filtreCurrentListeWithFilter();
         });
         colone.appendChild(button);
     }

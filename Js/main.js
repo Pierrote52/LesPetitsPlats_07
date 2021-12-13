@@ -3,7 +3,7 @@ import { checkAllFiltersValue } from "./service/checkFilters.js";
 import { displayVignettes } from "./service/displayVignettes.js";
 import { createButtons } from "./service/createButtons.js";
 import { ifNotFound } from "./service/notFound.js";
-import { initState } from "./service/initState.js";
+import { currentListeIngredientsState, initState } from "./service/initState.js";
 import { reciseCurrentListeElement } from "./service/recizeCurrentList.js";
 import { createFiltreForDisplay } from "./service/checkFilters.js";
 import { elementsName } from "./models/elementsName.js";
@@ -23,11 +23,14 @@ export var listeDesUstensiles = [];
 export var listeDesAppareils = [];
 export let listeNomDeRecette =[];
 
-//CurentListe la liste d'éléments filtrés. dans la fenêtre en bas des choix. 
+//CurentListe la liste d'éléments filtrés.
 export var currentListe = [];
+export var currentIngredients =[];
+export var currrentUstensiles = [];
+export var currentAppareils = [];
 
 
-//Ici nous avons la liste des filtres actifs selectionnés et présents dans l'algorythme.
+//Ici nous avons la liste des filtres actifs selectionnés et présents dans les trois filtres.
 export var currentIngredientsFilters=[];
 export var currrentUstensilesFilters = [];
 export var currentAppareilsFilters = [];
@@ -57,9 +60,14 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
-
     //Fait cette action ssi la currentListe est vide. 
+    if(currentListe.length==0){
         createButtons(listeDesIngredients, name.ingredient);
+    }else{
+        currentListeIngredientsState();
+        createButtons(currentIngredients, name.ingredient)
+    }
+        
     
     reciseCurrentListeElement();
 });
