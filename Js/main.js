@@ -21,12 +21,16 @@ export var listeRecipes = [];
 export var listeDesIngredients =[];
 export var listeDesUstensiles = [];
 export var listeDesAppareils = [];
+export let listeNomDeRecette =[];
 
-//CurentListe la liste d'éléments proposées dnas la fenetre en bas des choix. 
+//CurentListe la liste d'éléments filtrés. dans la fenêtre en bas des choix. 
 export var currentListe = [];
-export var currentIngredients =[];
-export var currrentUstensiles = [];
-export var currentAppareils = [];
+
+
+//Ici nous avons la liste des filtres actifs selectionnés et présents dans l'algorythme.
+export var currentIngredientsFilters=[];
+export var currrentUstensilesFilters = [];
+export var currentAppareilsFilters = [];
 
 //Creer des objets models pour aide de saisie. 
 var name=new elementsName();
@@ -53,7 +57,10 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
-    createButtons(listeDesIngredients,name.ingredient);
+
+    //Fait cette action ssi la currentListe est vide. 
+        createButtons(listeDesIngredients, name.ingredient);
+    
     reciseCurrentListeElement();
 });
 

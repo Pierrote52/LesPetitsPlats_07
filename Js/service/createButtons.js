@@ -1,4 +1,4 @@
-import { currentAppareils,currrentUstensiles, currentIngredients} from "../main.js";
+import { currentAppareilsFilters,currrentUstensilesFilters, currentIngredientsFilters} from "../main.js";
 import { elementsName } from "../models/elementsName.js";
 import { displayVignettesFilters } from "./displayVignettesFilters.js";
 
@@ -26,13 +26,13 @@ function addToHisList(_element, cathElement){
     var elementName = new elementsName();
     switch(cathElement){
         case elementName.ustensiles:
-            currrentUstensiles.push(_element);
+            currrentUstensilesFilters.push(_element);
             break;
         case elementName.appareils:
-            currentAppareils.push(_element);
+            currentAppareilsFilters.push(_element);
             break;
         case elementName.ingredient:
-            currentIngredients.push(_element);
+            currentIngredientsFilters.push(_element);
             break;    
     }
 

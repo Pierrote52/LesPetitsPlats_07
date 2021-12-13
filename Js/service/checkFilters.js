@@ -8,7 +8,7 @@ import { reciseCurrentListeElement } from "./recizeCurrentList.js";
 export function checkAllFiltersValue(value, liste){
 
     for(let i=0; i<liste.length;i++ ){
-        if(liste[i].description.includes(value)||liste[i].ustensils.includes(value)){
+        if(liste[i].description.includes(value)||liste[i].ustensils.includes(value)||liste[i].appliance.includes(value)||liste[i].nom.includes(value)){
             currentListe.push(liste[i]);
         }else{
             for(let j=0;j<liste[i].ingredients.length;j++){
@@ -35,7 +35,7 @@ export function checkUstensilesValue(value, liste){
 
 }
 
-//Cette fonction va chercher si un ingredient,correspond à la liste demandée. 
+//Cette fonction va chercher si un ingredient,correspond dans la liste demandée. 
 export function filtreIngredients(value, liste){
     let _currentList = [];
     for(let elemnt of liste){

@@ -1,10 +1,10 @@
-import { currentAppareils,currrentUstensiles, currentIngredients} from "../main.js";
+import { currentAppareilsFilters,currrentUstensilesFilters, currentIngredientsFilters} from "../main.js";
 
 
 export function  displayVignettesFilters(){
     let sectionFiltre = document.getElementById("sectionFiltres");
     sectionFiltre.innerHTML="";
-    for(let element of currentIngredients){
+    for(let element of currentIngredientsFilters){
         let div= document.createElement("div");
         div.className = "col-2 ingredient";
         div.innerHTML = `<p>${element}</p><button><img src=\"assets/Icons/close.svg\" alt=\"bouttonclose\" aria_label=\"button pour fermer\"></button>`;
@@ -13,14 +13,14 @@ export function  displayVignettesFilters(){
         sectionFiltre.appendChild(div);
 
     }
-    for(let element of currentAppareils){
+    for(let element of currentAppareilsFilters){
         let div= document.createElement("div");
         div.className = "col-2 appareils";
         div.innerHTML = `<p>${element}</p><button><img src=\"assets/Icons/close.svg\" alt=\"bouttonclose\" aria_label=\"button pour fermer\"></button>`;
         sectionFiltre.appendChild(div);
 
     }
-    for(let element of currrentUstensiles){
+    for(let element of currrentUstensilesFilters){
         let div= document.createElement("div");
         div.className = "col-2 ustensils";
         div.innerHTML = `<p>${element}</p><button><img src=\"assets/Icons/close.svg\" alt=\"bouttonclose\" aria_label=\"button pour fermer\"></button>`;
