@@ -1,7 +1,8 @@
-import { currentAppareilsFilters,currrentUstensilesFilters, currentIngredientsFilters} from "../main.js";
+import { currentAppareilsFilters,currrentUstensilesFilters, currentIngredientsFilters, currentListe} from "../main.js";
 import { elementsName } from "../models/elementsName.js";
 import { displayVignettesFilters } from "./displayVignettesFilters.js";
-import { filtreCurrentListeWithFilter } from "./filtreCurrentListeWithFilter.js";
+import { filtreListeWithFilter } from "./filtreListeWithFilter.js";
+import { displayVignettes } from "./displayVignettes.js";
 
 
 
@@ -17,8 +18,10 @@ export function createButtons(liste, cathElement){
         button.addEventListener('click', function(){
             console.log(element + " " + cathElement);
             addToHisList(element, cathElement);
-            displayVignettesFilters();
-            filtreCurrentListeWithFilter();
+            var _newListe = filtreListeWithFilter(currentListe,currentIngredientsFilters)
+            displayVignettesFilters(_newListe);
+          
+            displayVignettes(_newListe);
         });
         colone.appendChild(button);
     }
