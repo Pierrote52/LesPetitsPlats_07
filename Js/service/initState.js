@@ -31,7 +31,7 @@ export function initState(){
         }
        
     }
-    let section = document.getElementById('sectionFiltres');
+    let section = document.getElementById('rowDesFiltres');
     let focuses = section.getElementsByTagName('input');
     for(let focus of focuses){
         focus.addEventListener('focusout', function(){
