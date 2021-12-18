@@ -1,27 +1,15 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="fr">
-
-  <head>
-
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="./Scss/style.css">
-    <link rel ="stylesheet" href="Scss/custom/style.css">
-    <title>Les petits plats</title>
-
-  </head>
-
-  <body  id="sreen">
+<head>
+ <title>Les petits plats</title>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./Scss/style.css">
+<link rel ="stylesheet" href="Scss/custom/style.css">
+</head>
+  <body>
     <div class="container"> 
-        <div class="row">
-            <div class="col mr-0">
-                <button class=" text-center col-2 mr-3" id="changeMode">Change Mode</button>
-            </div>
-            
-        </div>
+        
         <div class="row ">
             <div class="col navbar navbar-expand text-center">
                 <img class="mx-auto mb-4" src="./assets/img/logo.svg" alt="Logo les petits plats"/>
@@ -32,17 +20,17 @@
                <input class="form-control" id="searchInput" type="text" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
             </div>
          </div>
-         <div class="row mb-3" id="sectionFiltres">
+         <div class="row mb-3" >
          </div>
-        <div class="row">
+        <div class="row" id="sectionFiltres">
             <div class="col-2">
-                <input class="form-control" type="text" name="Ingredients" placeholder="Ingredients" id="ingredients">
+                <input class="form-control " type="text" name="Ingredients" placeholder="Ingredients" id="ingredients">
             </div>
             <div class="col-2">
-                 <input class="form-control bg-success" type="text" name="Appareil" id="Appareil" placeholder="Appareil">
+                 <input class="form-control bg-success " type="text" name="Appareil" id="Appareil" placeholder="Appareil">
             </div>
             <div class="col-2">
-                <input class="form-control bg-danger" type="text" name="Ustensiles" id="Ustensiles" placeholder="Ustensiles">
+                <input class="form-control bg-danger " type="text" name="Ustensiles" id="Ustensiles" placeholder="Ustensiles">
             </div>
         </div>
         <div class="row">
@@ -57,13 +45,10 @@
         <div id="section" class="row">  
         </div>
     </div>
-
-    </div>
    
 
 
     <script type="module" src="./Js/main.js"></script>
-    <script type="module" src="./Js/widget/modeNuit.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
