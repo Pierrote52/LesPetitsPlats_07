@@ -1,13 +1,12 @@
-
-import { checkAllFiltersValue } from "./service/checkFilters.js";
+import { filtreRecette } from "./service/FiltreRecette.js";
 import { displayVignettes } from "./service/displayVignettes.js";
 import { createButtons } from "./service/createButtons.js";
 import { ifNotFound } from "./service/notFound.js";
-import { currentListeIngredientsState, initState } from "./service/initState.js";
+import { initState } from "./service/initState.js";
 import { reciseCurrentListeElement } from "./service/recizeCurrentList.js";
 import { createFiltreForDisplay } from "./service/checkFilters.js";
 import { elementsName } from "./models/elementsName.js";
-import { changecreenMode } from "./widget/modeNuit.js";
+import { currentAppareilState, currentIngredientsState, currentUstensilsState } from "./service/ListesStates.js";
 
 var saisieGenerale = document.getElementById("searchInput");
 var saisieIngredients = document.getElementById("ingredients");
@@ -32,6 +31,7 @@ export var currentAppareils = [];
 
 
 //Ici nous avons la liste des filtres actifs selectionnés et présents dans les trois filtres.
+export var currentGeneralFilter = "";
 export var currentIngredientsFilters=[];
 export var currrentUstensilesFilters = [];
 export var currentAppareilsFilters = [];
@@ -44,16 +44,13 @@ initState();
 displayVignettes(listeRecipes);
 // Quand un element est modifier saisie dans la grande barre de recherche.
 saisieGenerale.addEventListener('keyup', function(v){
-    //Plus de 3 caractères ? 
-    if(v.target.value.length >=3){
+    currentGeneralFilter = v.target.value;
         //Ici nous envoyons la valeur saisie , ainsi que la liste à tester. 
-        currentListe=[];
-        checkAllFiltersValue(v.target.value, listeRecipes);
+        var newListe = filtreRecette();
+        displayVignettes(newListe);
         ifNotFound();
         
-    }else {
-        displayVignettes(listeRecipes);
-    }
+    
 
 });
 
@@ -65,25 +62,33 @@ saisieIngredients.addEventListener('focusin', function(){
     if(currentListe.length==0){
         createButtons(listeDesIngredients, name.ingredient);
     }else{
-        currentListeIngredientsState();
+        currentIngredientsState();
         createButtons(currentIngredients, name.ingredient)
     }
-        
-    
     reciseCurrentListeElement();
 });
 
 saisieAppareil.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "green";
-    createButtons(listeDesAppareils, name.appareils);
+    if(currentListe.length==0){
+        createButtons(listeDesAppareils, name.appareils);
+    }else{
+        currentAppareilState();
+        createButtons(currentAppareils, name.appareils)
+    }
     reciseCurrentListeElement();
 });
 
 saisieUstensiles.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "red";
-    createButtons(listeDesUstensiles, name.ustensiles);
+    if(currentListe.length==0){
+        createButtons(listeDesUstensiles, name.ustensiles);
+    }else{
+        currentUstensilsState();
+        createButtons(currrentUstensiles, name.ustensiles)
+    }
     reciseCurrentListeElement();
 });
 

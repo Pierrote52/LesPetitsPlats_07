@@ -4,7 +4,7 @@ export class Recipe{
     constructor(id,nom,servings,ingredients,time,description,appliance,ustensils){
         this.id=id;
         this.nom =nom;
-        this.servings =servings;
+        this.servings=servings;
         this.ingredients=ingredients;
         this.time=time;
         this.description=description;
@@ -19,7 +19,7 @@ export class Recipe{
             var titre= document.createElement('span');
             titre.innerHTML = this.ingredients[i].ingredient;
             ingredient.appendChild(titre);
-            ingredient.innerHTML += ": " + this.ingredients[i].quantity;
+            this.ingredients[i].quantity !=null ? ingredient.innerHTML += ": " + this.ingredients[i].quantity:""
             if(this.ingredients[i].unit!=null) {ingredient.innerHTML += " " + this.ingredients[i].unit};
             ingredientsUl.appendChild(ingredient);  
         };

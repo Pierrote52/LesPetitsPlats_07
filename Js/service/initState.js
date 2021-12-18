@@ -1,7 +1,8 @@
 import { recipesArray } from "../../JSON/recipes.js";
 import { createRecipe } from "./createRecipe.js";
-import {currentIngredients,currentListe,listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette}from "../main.js";
-import {  } from "../main.js";
+import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette}from "../main.js";
+
+import { displayVignettes } from "./displayVignettes.js";
 //Cette fonction initialise les variables et les valeurs par defaut dans l'app. 
 export function initState(){
     for(let i=0; i<recipesArray.length; i++){
@@ -38,18 +39,7 @@ export function initState(){
 
         })
     }
+    displayVignettes(listeRecipes);
 }
 
-export function currentListeIngredientsState(){
-    for(var _recipe of currentListe){
-        var r = createRecipe(_recipe);
-        for(let newIngredient of r.ingredients){
-            currentIngredients.push(newIngredient.ingredient);
-        }
-        
 
-    }
-
-    
-
-}
