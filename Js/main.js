@@ -94,17 +94,15 @@ saisieUstensiles.addEventListener('focusin', function(){
 
 //Déclanche un evenement quand l'utilisateur saisie des lettres dans le champs. 
 saisieIngredients.addEventListener('keyup', function(v){
-  
-    console.log(name.ingredient)
-    createFiltreForDisplay(v, listeDesIngredients, name.ingredient);
+    createFiltreForDisplay(v, currentIngredients, name.ingredient);
 
 });
 saisieAppareil.addEventListener('keyup', function(v){
-    createFiltreForDisplay(v, listeDesAppareils, name.appareils);
+    createFiltreForDisplay(v, currentAppareils, name.appareils);
 
 });
 saisieUstensiles.addEventListener('keyup', function(v){
-        createFiltreForDisplay(v,listeDesUstensiles, name.ustensiles)
+        createFiltreForDisplay(v,currrentUstensiles, name.ustensiles)
 });
 
 

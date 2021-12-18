@@ -35,7 +35,8 @@ export function initState(){
     for(let focus of focuses){
         focus.addEventListener('focusout', function(){
             listeDesElements.style.height = "0";
-            listeDesElements.style.background = "transparent"
+            listeDesElements.style.background = "transparent";
+            focus.value = "";
 
         })
     }

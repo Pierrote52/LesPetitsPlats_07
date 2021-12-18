@@ -22,6 +22,7 @@ export function checkUstensilesValue(value, liste){
 export function filtreIngredients(value, liste){
     let _currentList = [];
     for(let elemnt of liste){
+        elemnt = elemnt.toLowerCase();
         let nombredelettres = value.length;
         let error=false;
         for(let i=0; i<nombredelettres;i++){
@@ -41,10 +42,10 @@ export function filtreIngredients(value, liste){
     return _currentList;
 }
 
-export function createFiltreForDisplay(v, _listeDesIngredients,elementsName){
-    createButtons([]);
-    let value = v.target.value;
-    let _currentList = filtreIngredients(value, _listeDesIngredients);
+export function createFiltreForDisplay(v, currentListe,elementsName){
+    
+    let value = v.target.value.toLowerCase();
+    let _currentList = filtreIngredients(value, currentListe);
     createButtons(_currentList, elementsName);
     reciseCurrentListeElement();
 
