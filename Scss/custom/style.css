@@ -39,6 +39,7 @@
   margin-bottom: auto;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .appareils {
@@ -212,6 +213,7 @@ article {
   border-radius: 5px;
   overflow: hidden;
   background-color: #e7e7e7;
+  height: 80%;
 }
 
 article .image {
@@ -232,6 +234,7 @@ article .titreEtTemps {
 article .titreEtTemps p {
   font-size: 1rem;
   font-weight: bold;
+  text-overflow: ellipsis;
 }
 
 article .row {

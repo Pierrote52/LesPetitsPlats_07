@@ -1,22 +1,7 @@
 
-import{currentListe} from "../main.js";
-import { displayVignettes } from "./displayVignettes.js";
 import { createButtons } from "./createButtons.js";
 import { reciseCurrentListeElement } from "./recizeCurrentList.js";
 
-
-export function checkIngredientsValue(value, liste){
-    
-
-}
-export function checkAppareilValue(value, liste){
-    //Cette fonction contrôle la liste avec le parametre Appareil. 
-
-}
-export function checkUstensilesValue(value, liste){
-    //Cette fonction contrôle la liste avec le parametre Ustensiles. 
-
-}
 
 //Cette fonction va chercher si un ingredient,correspond dans la liste demandée. 
 export function filtreIngredients(value, liste){
