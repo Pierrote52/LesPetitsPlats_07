@@ -35,6 +35,7 @@ export var currentGeneralFilter = "";
 export var currentIngredientsFilters=[];
 export var currrentUstensilesFilters = [];
 export var currentAppareilsFilters = [];
+export var newMapList= new Map();
 
 //Creer des objets models pour aide de saisie. 
 var name=new elementsName();

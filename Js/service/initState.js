@@ -1,6 +1,6 @@
 import { recipesArray } from "../../JSON/recipes.js";
 import { createRecipe } from "./createRecipe.js";
-import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette}from "../main.js";
+import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette, newMapList}from "../main.js";
 
 import { displayVignettes } from "./displayVignettes.js";
 //Cette fonction initialise les variables et les valeurs par defaut dans l'app. 
@@ -40,6 +40,15 @@ export function initState(){
             focus.value = "";
 
         })
+    }
+
+    //Initialise newFiltredListe. 
+    for (var e of listeRecipes) {
+        var _listeE=[];
+        e.ingredients.forEach((ele)=>_listeE.push(ele.ingredient.toLowerCase()));
+       _listeE.push(e.description.toLowerCase());
+       _listeE.push(e.nom.toLowerCase());
+        newMapList.set(e.id,_listeE)
     }
     displayVignettes(listeRecipes);
 }
