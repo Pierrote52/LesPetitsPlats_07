@@ -25,17 +25,19 @@ export function filtreRecette() {
         // }
 
         // let recette = currentListe.find((element)=>{return element.nom.toLowerCase().includes(value.toLowerCase())});
-        currentListe.forEach(element => {
-            if (!element.nom.toLowerCase().includes(value.toLowerCase())&&!element.description.toLowerCase().includes(value.toLowerCase())
-            &&!element.ingredients.forEach((ingredient)=>{
-                return ingredient.ingredient.toLowerCase().includes(value.toLowerCase())})) {
+        for(let i=0; i<_newFiltredListe.length;i++){
+            var element = _newFiltredListe[i];
+            if (!element.nom.toLowerCase().includes(value)
+                && !element.description.toLowerCase().includes(value)
+                && !element.ingredients.forEach((ingredient) => { return ingredient.ingredient.toLowerCase().includes(value) })) {
                 var index = _newFiltredListe.indexOf(element);
                 _newFiltredListe.splice(index, 1);
+                i-=1;
             }
 
         }
 
-        )
+        
     };
     //Y'a t'il des filtres dans les filtres ingrédients ? 
     if (currentIngredientsFilters.length > 0) {
