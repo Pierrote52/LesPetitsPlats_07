@@ -59,6 +59,8 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
+    // saisieIngredients.parentElement.className = "col-8";
+
     //Fait cette action ssi la currentListe est vide. 
     if(currentListe.length==0){
         createButtons(listeDesIngredients, name.ingredient);
