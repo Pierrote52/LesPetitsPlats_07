@@ -117,7 +117,6 @@
 
 #listeDesElements {
   position: relative;
-  height: 0rem;
   background-color: transparent;
   -webkit-transition: all 1000ms;
   transition: all 1000ms;

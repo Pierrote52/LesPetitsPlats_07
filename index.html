@@ -10,7 +10,7 @@
   <body>
     <div class="container"> 
         
-        <div class="row ">
+        <div class="row ">              
             <div class="col navbar navbar-expand text-center">
                 <img class="mx-auto mb-4" src="./assets/img/logo.svg" alt="Logo les petits plats"/>
             </div>
@@ -24,7 +24,13 @@
          </div>
         <div class="row" id="rowDesFiltres">
             <div class="col-2">
-                <input class="form-control " type="text" name="Ingredients" placeholder="Ingredients" id="ingredients">
+               
+                    <div class="col mx-2 my-2" id="listeDesElements"> 
+                        <input class="form-control " type="text" name="Ingredients" placeholder="Ingredients" id="ingredients">
+                        <div class="col" id="coloneElements">
+                            
+                        </div>
+                     </div>   
             </div>
             <div class="col-2">
                  <input class="form-control bg-success " type="text" name="Appareil" id="Appareil" placeholder="Appareil">
@@ -33,13 +39,6 @@
                 <input class="form-control bg-danger " type="text" name="Ustensiles" id="Ustensiles" placeholder="Ustensiles">
             </div>
         </div>
-        <div class="row">
-            <div class="col-8 mx-2 my-2" id="listeDesElements">
-                <div class="col" id="coloneElements">
-                    
-                </div>
-                
-            </div>
             
         </div>
         <div id="section" class="row">  

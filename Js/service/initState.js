@@ -35,7 +35,7 @@ export function initState(){
     let focuses = section.getElementsByTagName('input');
     for(let focus of focuses){
         focus.addEventListener('focusout', function(){
-            listeDesElements.style.height = "0";
+             listeDesElements.style.height = "inherit";
             listeDesElements.style.background = "transparent";
             focus.value = "";
 
