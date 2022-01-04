@@ -7,7 +7,20 @@ import { filtreRecette } from "./FiltreRecette.js";
 
 
 export function createButtons(liste, cathElement){
-    let colone = document.getElementById('coloneElements');
+    var colone;
+    var elementName = new elementsName();
+    switch(cathElement){
+        case elementName.ingredient:
+            colone = document.getElementById('coloneIngredients');
+            break;
+        case elementName.appareils:
+            colone = document.getElementById('coloneAppareil');
+            break;
+        case elementName.ustensiles:
+            colone = document.getElementById('coloneUstensiles');
+
+    }
+    
     colone.innerHTML ="";
     //Faire une boucle pour creer et appenchild a la colone les elements ingredients de la liste des ingredients. 
     for(let element of liste){

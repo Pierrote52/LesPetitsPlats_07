@@ -12,8 +12,12 @@ var saisieGenerale = document.getElementById("searchInput");
 var saisieIngredients = document.getElementById("ingredients");
 var saisieAppareil = document.getElementById("Appareil");
 var saisieUstensiles = document.getElementById("Ustensiles");
-export var listeDesElements = document.getElementById('listeDesElements');
+export var listeDesElements = document.getElementById('listeDesIngredients');
 export let colone = document.getElementById('coloneElements');
+export let coloneIngredients = document.getElementById("coloneIngredients");
+export let coloneAppareil = document.getElementById("coloneAppareil");
+export let coloneUstensiles = document.getElementById("coloneUstensiles");
+
 export var section = document.getElementById("section");
 
 //Liste des objets de la liste à l'état initial.
@@ -107,7 +111,3 @@ saisieAppareil.addEventListener('keyup', function(v){
 saisieUstensiles.addEventListener('keyup', function(v){
         createFiltreForDisplay(v,currrentUstensiles, name.ustensiles)
 });
-
-
-
-
