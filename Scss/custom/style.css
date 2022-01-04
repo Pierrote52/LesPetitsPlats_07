@@ -106,6 +106,11 @@
   overflow: hidden;
 }
 
+#coloneIngredients {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
 #ingredients {
   color: white;
   opacity: 1;
@@ -128,7 +133,7 @@
   position: absolute;
 }
 
-#listeDesElements .col button {
+button {
   margin-right: 5%;
   border: none;
   background-color: transparent;

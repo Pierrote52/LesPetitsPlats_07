@@ -35,23 +35,51 @@ export function initState(){
     let section = document.getElementById('rowDesFiltres');
     let focuses = section.getElementsByTagName('input');
     for(let focus of focuses){
-        focus.addEventListener('focusout', function(){
-            var elementName = new elementsName();
-            console.log("Nous avons cette valeure "+focus.name.toLowerCase());
+        focus.addEventListener('focusout',()=> {
+            setTimeout(() => {
+                switch(focus.name.toLowerCase()){
+                    case "ingredients":
+                  
+                        coloneIngredients.style.display= "none";
+                        coloneIngredients.parentNode.parentNode.className= "col-2";
+                    break;
+                    case "appareil":
+                        coloneAppareil.style.display="none";
+                        coloneAppareil.parentNode.parentNode.className= "col-2";
+                    break;
+                    case "ustensiles": 
+                        coloneUstensiles.style.display="none";
+                        coloneUstensiles.parentNode.parentNode.className= "col-2";
+                    break;           
+    
+                }
+                //  listeDesElements.style.height = "inherit";
+                // listeDesElements.style.background = "transparent";
+                focus.value = "";
+                
+            }, 200);
+
+    
+            
+
+        });
+        focus.addEventListener('focusin', function(){
+           
             switch(focus.name.toLowerCase()){
                 case "ingredients":
-                    coloneIngredients.style.display= "none";
+                    coloneIngredients.style.display="block"
+                    coloneIngredients.parentNode.parentNode.className= "col-6";
                 break;
                 case "appareil":
                     coloneAppareil.style.display="none";
+                    coloneAppareil.parentNode.parentNode.className="col-6";
                 break;
                 case "ustensiles": 
-                    coloneUstensiles.style.display="none"               
+                    coloneUstensiles.style.display="none";
+                    coloneUstensiles.parentNode.parentNode.className="col-6";
+                break;            
 
             }
-            //  listeDesElements.style.height = "inherit";
-            // listeDesElements.style.background = "transparent";
-            focus.value = "";
 
         })
     }
@@ -66,5 +94,6 @@ export function initState(){
     }
     displayVignettes(listeRecipes);
 }
+
 
 

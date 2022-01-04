@@ -28,6 +28,7 @@ export function createButtons(liste, cathElement){
         button.innerHTML = element.toLowerCase();
         button.className= "col-3";
         button.addEventListener('click', function(){
+            console.log('boutton cliqué');
             addToHisList(element, cathElement);
             displayVignettesFilters();
             var n = filtreRecette();

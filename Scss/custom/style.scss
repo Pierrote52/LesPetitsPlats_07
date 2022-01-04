@@ -84,6 +84,10 @@
        
     }
 }
+#coloneIngredients{
+    transition: all 3s;
+
+}
 #ingredients{
     color:white;
     opacity: 1;
@@ -100,14 +104,15 @@
     border-radius: 10px;
     .col{ 
         position:absolute;
-        button{
-            margin-right: 5%;
-            border: none;
-            background-color: transparent;
-            color: ghostwhite;
-            text-align: left;
-        }
+        
     }
+}
+button{
+    margin-right: 5%;
+    border: none;
+    background-color: transparent;
+    color: ghostwhite;
+    text-align: left;
 }
 #ingredients::placeholder {
     color:white;

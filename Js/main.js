@@ -63,7 +63,8 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
-    coloneIngredients.style.display= "block"
+    coloneIngredients.style.display= "block";
+    
    
     // saisieIngredients.parentElement.className = "col-8";
 
