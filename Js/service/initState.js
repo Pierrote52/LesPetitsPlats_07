@@ -1,8 +1,9 @@
 import { recipesArray } from "../../JSON/recipes.js";
 import { createRecipe } from "./createRecipe.js";
-import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette, newMapList}from "../main.js";
+import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette, newMapList, coloneIngredients, coloneAppareil, coloneUstensiles}from "../main.js";
 
 import { displayVignettes } from "./displayVignettes.js";
+import { elementsName } from "../models/elementsName.js";
 //Cette fonction initialise les variables et les valeurs par defaut dans l'app. 
 export function initState(){
     for(let i=0; i<recipesArray.length; i++){
@@ -35,8 +36,21 @@ export function initState(){
     let focuses = section.getElementsByTagName('input');
     for(let focus of focuses){
         focus.addEventListener('focusout', function(){
-             listeDesElements.style.height = "inherit";
-            listeDesElements.style.background = "transparent";
+            var elementName = new elementsName();
+            console.log("Nous avons cette valeure "+focus.name.toLowerCase());
+            switch(focus.name.toLowerCase()){
+                case "ingredients":
+                    coloneIngredients.style.display= "none";
+                break;
+                case "appareil":
+                    coloneAppareil.style.display="none";
+                break;
+                case "ustensiles": 
+                    coloneUstensiles.style.display="none"               
+
+            }
+            //  listeDesElements.style.height = "inherit";
+            // listeDesElements.style.background = "transparent";
             focus.value = "";
 
         })

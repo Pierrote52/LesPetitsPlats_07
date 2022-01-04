@@ -32,7 +32,5 @@ export function createFiltreForDisplay(v, currentListe,elementsName){
     let value = v.target.value.toLowerCase();
     let _currentList = filtreIngredients(value, currentListe);
     createButtons(_currentList, elementsName);
-    reciseCurrentListeElement();
-
 }
 

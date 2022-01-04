@@ -63,6 +63,8 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
+    coloneIngredients.style.display= "block"
+   
     // saisieIngredients.parentElement.className = "col-8";
 
     //Fait cette action ssi la currentListe est vide. 
@@ -72,31 +74,33 @@ saisieIngredients.addEventListener('focusin', function(){
         currentIngredientsState();
         createButtons(currentIngredients, name.ingredient)
     }
-    reciseCurrentListeElement();
+   
 });
 
 saisieAppareil.addEventListener('focusin', function(){
 
-    listeDesElements.style.background = "green";
+    coloneAppareil.style.background = "green";
+    coloneAppareil.style.display= "block";
     if(currentListe.length==0){
         createButtons(listeDesAppareils, name.appareils);
     }else{
         currentAppareilState();
         createButtons(currentAppareils, name.appareils)
     }
-    reciseCurrentListeElement();
+    
 });
 
 saisieUstensiles.addEventListener('focusin', function(){
 
-    listeDesElements.style.background = "red";
+    coloneUstensiles.style.background = "red";
+    coloneUstensiles.style.display= "block";
     if(currentListe.length==0){
         createButtons(listeDesUstensiles, name.ustensiles);
     }else{
         currentUstensilsState();
         createButtons(currrentUstensiles, name.ustensiles)
     }
-    reciseCurrentListeElement();
+   
 });
 
 //Déclanche un evenement quand l'utilisateur saisie des lettres dans le champs. 
