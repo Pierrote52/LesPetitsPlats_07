@@ -63,7 +63,7 @@ saisieGenerale.addEventListener('keyup', function(v){
 saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
-    coloneIngredients.style.display= "block";
+
     
    
     // saisieIngredients.parentElement.className = "col-8";
@@ -81,7 +81,6 @@ saisieIngredients.addEventListener('focusin', function(){
 saisieAppareil.addEventListener('focusin', function(){
 
     coloneAppareil.style.background = "green";
-    coloneAppareil.style.display= "block";
     if(currentListe.length==0){
         createButtons(listeDesAppareils, name.appareils);
     }else{
@@ -94,7 +93,6 @@ saisieAppareil.addEventListener('focusin', function(){
 saisieUstensiles.addEventListener('focusin', function(){
 
     coloneUstensiles.style.background = "red";
-    coloneUstensiles.style.display= "block";
     if(currentListe.length==0){
         createButtons(listeDesUstensiles, name.ustensiles);
     }else{

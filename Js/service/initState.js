@@ -64,22 +64,24 @@ export function initState(){
 
         });
         focus.addEventListener('focusin', function(){
-           
+           setTimeout(()=>{
             switch(focus.name.toLowerCase()){
                 case "ingredients":
                     coloneIngredients.style.display="block"
                     coloneIngredients.parentNode.parentNode.className= "col-6";
                 break;
                 case "appareil":
-                    coloneAppareil.style.display="none";
+                    coloneAppareil.style.display="block";
                     coloneAppareil.parentNode.parentNode.className="col-6";
                 break;
                 case "ustensiles": 
-                    coloneUstensiles.style.display="none";
+                    coloneUstensiles.style.display="block";
                     coloneUstensiles.parentNode.parentNode.className="col-6";
                 break;            
 
             }
+           }, 200)
+           
 
         })
     }
