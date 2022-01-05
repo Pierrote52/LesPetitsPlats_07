@@ -2,11 +2,22 @@
   border-radius: 10px;
 }
 
-#searchInput {
+#RechercheGenerale {
+  position: relative;
+}
+
+#RechercheGenerale #searchInput {
   height: 2rem;
   background-color: #e7e7e7;
   padding: 3%;
   border-width: 0ch;
+}
+
+#RechercheGenerale #loupe {
+  position: absolute;
+  width: 3%;
+  top: 20%;
+  right: 2%;
 }
 
 .ingredient {
@@ -118,19 +129,30 @@
   -webkit-transition: all 3s;
   transition: all 3s;
   margin-right: 20rem;
+  padding: 10%;
 }
 
-#listeDesElements {
+#Appareil {
+  color: white;
+  opacity: 1;
+  padding: 10%;
+}
+
+#Ustensiles {
+  color: white;
+  opacity: 1;
+  padding: 10%;
+}
+
+#listeDesIngredients {
   position: relative;
-  background-color: transparent;
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
-  overflow: hidden;
-  border-radius: 10px;
 }
 
-#listeDesElements .col {
+#listeDesIngredients .sparrow {
   position: absolute;
+  top: 25%;
+  width: 10%;
+  right: 5%;
 }
 
 button {
@@ -161,11 +183,6 @@ button {
   opacity: 1;
 }
 
-#Appareil {
-  color: white;
-  opacity: 1;
-}
-
 #Appareil::-webkit-input-placeholder {
   color: white;
   opacity: 1;
@@ -182,11 +199,6 @@ button {
 }
 
 #Appareil::placeholder {
-  color: white;
-  opacity: 1;
-}
-
-#Ustensiles {
   color: white;
   opacity: 1;
 }

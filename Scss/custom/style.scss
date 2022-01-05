@@ -2,13 +2,25 @@
     border-radius: 10px;
 }
 
-#searchInput{
+
+#RechercheGenerale{
+    position: relative;
+    #searchInput{
     height: 2rem;
     background-color:rgba(231, 231, 231, 1);
     padding: 3%;
     border-width: 0ch;
 
 }
+#loupe{
+    position: absolute;
+    width: 3%;
+    top:20%;
+    right: 2%;
+}
+
+}
+
 .ingredient{
     margin-left: 1%;
     display: flex;
@@ -17,6 +29,7 @@
     color:white;
     border-radius: 5px;
     text-align: center;
+    
     button{
         border-width: 0;
         background-color: transparent;
@@ -94,17 +107,28 @@
     background-color:dodgerblue;
     transition: all 3s;
     margin-right: 20rem;
+    padding: 10%;
 }
-#listeDesElements{
-    position:relative;
+#Appareil{
+    color:white;
+    opacity: 1;
+    padding: 10%;
     
-    background-color: transparent;
-    transition: all 1000ms;
-    overflow: hidden;
-    border-radius: 10px;
-    .col{ 
-        position:absolute;
-        
+}
+#Ustensiles{
+    color:white;
+    opacity: 1;
+    padding: 10%;
+    
+}
+
+#listeDesIngredients{
+    position: relative;
+    .sparrow{
+        position: absolute;
+        top:25%;
+        width: 10%;
+        right:5%;
     }
 }
 button{
@@ -118,21 +142,13 @@ button{
     color:white;
     opacity: 1;
     }
-#Appareil{
-    color:white;
-    opacity: 1;
-    
-}
+
 #Appareil::placeholder {
     color:white;
     opacity: 1;
     }
 
-#Ustensiles{
-    color:white;
-    opacity: 1;
-    
-}
+
 #Ustensiles::placeholder {
     color:white;
     opacity: 1;

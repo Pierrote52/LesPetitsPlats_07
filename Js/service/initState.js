@@ -51,7 +51,6 @@ export function initState(){
                         coloneUstensiles.style.display="none";
                         coloneUstensiles.parentNode.parentNode.className= "col-2";
                     break;           
-    
                 }
                 //  listeDesElements.style.height = "inherit";
                 // listeDesElements.style.background = "transparent";

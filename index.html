@@ -2,7 +2,6 @@
 <html lang="fr">
 <head>
  <title>Les petits plats</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="./Scss/style.css">
 <link rel ="stylesheet" href="Scss/custom/style.css">
@@ -16,8 +15,9 @@
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col">
+            <div class="col" id="RechercheGenerale">
                <input class="form-control" id="searchInput" type="text" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
+               <img src = "assets/Icons/search-solid.svg" id="loupe">
             </div>
          </div>
          <div class="row mb-3" id="sectionFiltres">
@@ -26,6 +26,7 @@
             <div class="col-2">
                     <div class="col mx-2 my-2" id="listeDesIngredients"> 
                         <input class="form-control " type="text" name="Ingredients" placeholder="Ingredients" id="ingredients">
+                        <img src="assets/Icons/angle-up-solid.svg" class="sparrow">
                         <div class="col" id="coloneIngredients">
                         </div>
                         </div>
@@ -47,7 +48,7 @@
             </div>
         </div>
             
-        </div>
+        
         <div id="section" class="row">  
         </div>
     </div>
