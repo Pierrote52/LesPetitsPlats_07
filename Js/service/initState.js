@@ -1,6 +1,6 @@
 import { recipesArray } from "../../JSON/recipes.js";
 import { createRecipe } from "./createRecipe.js";
-import {listeRecipes, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette, newMapList, coloneIngredients, coloneAppareil, coloneUstensiles}from "../main.js";
+import {saisieIngredients,saisieAppareil,saisieUstensiles,listeRecipes, listeDesElements, listeDesAppareils, listeDesIngredients, listeDesUstensiles, listeNomDeRecette, newMapList, coloneIngredients, coloneAppareil, coloneUstensiles}from "../main.js";
 
 import { displayVignettes } from "./displayVignettes.js";
 import { elementsName } from "../models/elementsName.js";
@@ -42,14 +42,20 @@ export function initState(){
                   
                         coloneIngredients.style.display= "none";
                         coloneIngredients.parentNode.parentNode.className= "col-2";
+                        listeDesElements.getElementsByClassName('sparrow')[0].style.transform="rotate(180deg)";
+                        saisieIngredients.placeholder="Ingredients";
                     break;
                     case "appareil":
                         coloneAppareil.style.display="none";
                         coloneAppareil.parentNode.parentNode.className= "col-2";
+                        document.getElementById('listeDesAppareils').getElementsByClassName('sparrow')[0].style.transform = "rotate(180deg)";
+                        saisieAppareil.placeholder='Appareil';
                     break;
                     case "ustensiles": 
                         coloneUstensiles.style.display="none";
                         coloneUstensiles.parentNode.parentNode.className= "col-2";
+                        document.getElementById('listeDesUstensiles').getElementsByClassName('sparrow')[0].style.transform = "rotate(180deg)";
+                        saisieUstensiles.placeholder='Ustensile';
                     break;           
                 }
                 //  listeDesElements.style.height = "inherit";

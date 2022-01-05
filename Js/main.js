@@ -9,9 +9,9 @@ import { elementsName } from "./models/elementsName.js";
 import { currentAppareilState, currentIngredientsState, currentUstensilsState } from "./service/ListesStates.js";
 
 var saisieGenerale = document.getElementById("searchInput");
-var saisieIngredients = document.getElementById("ingredients");
-var saisieAppareil = document.getElementById("Appareil");
-var saisieUstensiles = document.getElementById("Ustensiles");
+export var saisieIngredients = document.getElementById("ingredients");
+export var saisieAppareil = document.getElementById("Appareil");
+export var saisieUstensiles = document.getElementById("Ustensiles");
 export var listeDesElements = document.getElementById('listeDesIngredients');
 export var listeAppareils = document.getElementById('listeDesAppareils');
 export var listeUstensiles = document.getElementById('listeDesUstensiles');
@@ -67,8 +67,8 @@ saisieIngredients.addEventListener('focusin', function(){
     listeDesElements.style.background = "dodgerblue";
 
     //Change retourne le sparrow, et change le texte du PLaceHolder. 
-    let sparowIng = listeDesElements.getElementsByClassName('sparrow')[0];
-    sparowIng.style.transform="rotate(0deg)";
+     listeDesElements.getElementsByClassName('sparrow')[0].style.transform="rotate(0deg)";
+    
     saisieIngredients.placeholder="Recherche un ingrédient";
 
 
@@ -87,6 +87,8 @@ saisieIngredients.addEventListener('focusin', function(){
 saisieAppareil.addEventListener('focusin', function(){
 
     coloneAppareil.style.background = "green";
+    document.getElementById('listeDesAppareils').getElementsByClassName('sparrow')[0].style.transform = "rotate(0deg)";
+    saisieAppareil.placeholder='Recherche un appareil';
 
     if(currentListe.length==0){
         createButtons(listeDesAppareils, name.appareils);
@@ -100,6 +102,8 @@ saisieAppareil.addEventListener('focusin', function(){
 saisieUstensiles.addEventListener('focusin', function(){
 
     coloneUstensiles.style.background = "red";
+    document.getElementById('listeDesUstensiles').getElementsByClassName('sparrow')[0].style.transform = "rotate(0deg)";
+    saisieUstensiles.placeholder='Recherche un ustensile';
     if(currentListe.length==0){
         createButtons(listeDesUstensiles, name.ustensiles);
     }else{
