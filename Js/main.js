@@ -13,6 +13,8 @@ var saisieIngredients = document.getElementById("ingredients");
 var saisieAppareil = document.getElementById("Appareil");
 var saisieUstensiles = document.getElementById("Ustensiles");
 export var listeDesElements = document.getElementById('listeDesIngredients');
+export var listeAppareils = document.getElementById('listeDesAppareils');
+export var listeUstensiles = document.getElementById('listeDesUstensiles');
 export let colone = document.getElementById('coloneElements');
 export let coloneIngredients = document.getElementById("coloneIngredients");
 export let coloneAppareil = document.getElementById("coloneAppareil");
@@ -64,8 +66,12 @@ saisieIngredients.addEventListener('focusin', function(){
 
     listeDesElements.style.background = "dodgerblue";
 
-    
-   
+    //Change retourne le sparrow, et change le texte du PLaceHolder. 
+    let sparowIng = listeDesElements.getElementsByClassName('sparrow')[0];
+    sparowIng.style.transform="rotate(0deg)";
+    saisieIngredients.placeholder="Recherche un ingrédient";
+
+
     // saisieIngredients.parentElement.className = "col-8";
 
     //Fait cette action ssi la currentListe est vide. 
@@ -81,6 +87,7 @@ saisieIngredients.addEventListener('focusin', function(){
 saisieAppareil.addEventListener('focusin', function(){
 
     coloneAppareil.style.background = "green";
+
     if(currentListe.length==0){
         createButtons(listeDesAppareils, name.appareils);
     }else{

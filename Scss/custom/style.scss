@@ -97,39 +97,40 @@
        
     }
 }
-#coloneIngredients{
-    transition: all 3s;
 
-}
 #ingredients{
     color:white;
     opacity: 1;
     background-color:dodgerblue;
     transition: all 3s;
     margin-right: 20rem;
-    padding: 10%;
+    padding: 20px;
 }
 #Appareil{
     color:white;
     opacity: 1;
-    padding: 10%;
+    padding: 20px;
     
 }
 #Ustensiles{
     color:white;
     opacity: 1;
-    padding: 10%;
+    padding: 20px;
     
 }
 
-#listeDesIngredients{
-    position: relative;
+#listeDesIngredients, #listeDesAppareils, #listeDesUstensiles{
+    .cathEtSparrow{
+        position: relative;
     .sparrow{
         position: absolute;
         top:25%;
-        width: 10%;
+        width: 20px;
         right:5%;
+        transform: rotate(180deg);
     }
+    }
+    
 }
 button{
     margin-right: 5%;
@@ -169,10 +170,19 @@ article{
             p{
             font-size: 1rem;
             font-weight: bold;
+            max-width: 70%;
             }
             padding: 5%;
             display: flex;
             justify-content: space-between;
+            .clock{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 20px;
+                    margin-right: 5px;
+                }
+            }
 
         }
         .row{

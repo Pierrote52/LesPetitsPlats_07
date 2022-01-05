@@ -26,7 +26,7 @@ export class Recipe{
           var content= `
           <article class="vignette">
               <div class="image"></div>
-              <div class="titreEtTemps"><p>${this.nom}</p><p>${this.time} min</p></div>
+              <div class="titreEtTemps"><p>${this.nom}</p><p class="clock"><img src="assets/Icons/clock-regular.svg">${this.time} min</p></div>
               <div class="row">
                   <div class="col-6">` + 
 
