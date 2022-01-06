@@ -8,21 +8,6 @@ export function filtreRecette() {
     for(var e of listeRecipes){
         _newFiltredListe.push(e)
     }
-//     //Y at'il un champ saisie dans la recherche générale ? 
-//     if(currentGeneralFilter.length>2){
-//         var value = currentGeneralFilter.toLowerCase();
-//         console.log("Il y a un element dans la recherche generale.");
-//         for(let i=0; i<_newFiltredListe.length;i++){
-//             if(_newFiltredListe[i].description.toLowerCase().includes(value)||_newFiltredListe[i].ustensils.includes(value)||_newFiltredListe[i].appliance.toLowerCase().includes(value)||_newFiltredListe[i].nom.toLowerCase().includes(value)){
-               
-//             }else{
-//                 var index = _newFiltredListe.indexOf(e);
-//                _newFiltredListe.splice(i,1);
-//                i-=1;
-//             }
-        
-//     }
-// };
     
     //Y at'il un champ saisie dans la recherche générale ? 
     
