@@ -28,7 +28,6 @@ export function filtreRecette() {
     if (currentGeneralFilter.length > 2) {
         var listeASupprimer =[];
         var currentValue = currentGeneralFilter.toLowerCase();
-        console.log("Il y a un element dans la recherche generale.");
         //     for(let i=0; i<_newFiltredListe.length;i++){
         //         if(_newFiltredListe[i].description.toLowerCase().includes(value)||_newFiltredListe[i].ustensils.includes(value)||_newFiltredListe[i].appliance.toLowerCase().includes(value)||_newFiltredListe[i].nom.toLowerCase().includes(value)){
 

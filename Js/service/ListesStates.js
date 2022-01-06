@@ -37,11 +37,11 @@ export function currentAppareilState(){
 }
 
 export function currentUstensilsState(){
-    currrentUstensiles.splice(0, currrentUstensiles.length);
+    currentUstensiles.splice(0, currentUstensiles.length);
     for(var r of currentListe){
         for(var ing of r.ustensils){
-            if(!currrentUstensiles.includes(ing)){
-                currrentUstensiles.push(ing)
+            if(!currentUstensiles.includes(ing)){
+                currentUstensiles.push(ing)
             }
         }
     }
