@@ -108,7 +108,7 @@ saisieUstensiles.addEventListener('focusin', function(){
         createButtons(listeDesUstensiles, name.ustensiles);
     }else{
         currentUstensilsState();
-        createButtons(currrentUstensiles, name.ustensiles)
+        createButtons(currentUstensiles, name.ustensiles)
     }
    
 });
