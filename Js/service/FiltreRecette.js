@@ -30,17 +30,6 @@ export function filtreRecette() {
         console.time("fonction tri 1 ");
         var listeASupprimer =[];
         var currentValue = currentGeneralFilter.toLowerCase();
-        //     for(let i=0; i<_newFiltredListe.length;i++){
-        //         if(_newFiltredListe[i].description.toLowerCase().includes(currentValue)||_newFiltredListe[i].ustensils.includes(currentValue)||_newFiltredListe[i].appliance.toLowerCase().includes(currentValue)||_newFiltredListe[i].nom.toLowerCase().includes(currentValue)){
-
-        //         }else{
-        //            _newFiltredListe.splice(i,1);
-        //            i-=1;
-        //         }
-
-        // }
-
-        // let recette = currentListe.find((element)=>{return element.nom.toLowerCase().includes(value.toLowerCase())});
         for(var [key,value] of newMapList){
             var supprimerElement=true;
         value.forEach((elem)=>{
