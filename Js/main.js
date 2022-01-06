@@ -120,6 +120,7 @@ saisieIngredients.addEventListener('keyup', function(v){
         createFiltreForDisplay(v, currentIngredients, name.ingredient);
     }else{
         saisieIngredients.value="";
+        createFiltreForDisplay(v, currentIngredients, name.ingredient)
     }
     
 
@@ -130,6 +131,8 @@ saisieAppareil.addEventListener('keyup', function(v){
     createFiltreForDisplay(v, currentAppareils, name.appareils);
     }else{
         saisieAppareil.value="";
+        createFiltreForDisplay(v, currentAppareils, name.appareils);
+       
     }
 
 });
@@ -139,6 +142,7 @@ saisieUstensiles.addEventListener('keyup', function(v){
                createFiltreForDisplay(v,currentUstensiles, name.ustensiles)
     }else{
         saisieUstensiles.value="";
+        createFiltreForDisplay(v, currentUstensiles, name.ustensiles);
     }
  
 });
