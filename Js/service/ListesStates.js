@@ -1,4 +1,4 @@
-import { currentListe, currentIngredients, currentAppareils, currrentUstensiles} from "../main.js"
+import { currentListe, currentIngredients, currentAppareils, currentUstensiles} from "../main.js"
 
 
 //cette methode met à jour la liste courante avec une nouvelle liste.

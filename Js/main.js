@@ -32,7 +32,7 @@ export let listeNomDeRecette =[];
 //CurentListe la liste d'éléments filtrés.
 export var currentListe = [];
 export var currentIngredients =[];
-export var currrentUstensiles = [];
+export var currentUstensiles = [];
 export var currentAppareils = [];
 
 
@@ -115,13 +115,30 @@ saisieUstensiles.addEventListener('focusin', function(){
 
 //Déclanche un evenement quand l'utilisateur saisie des lettres dans le champs. 
 saisieIngredients.addEventListener('keyup', function(v){
-    createFiltreForDisplay(v, currentIngredients, name.ingredient);
+    if(/[a-zA-Z]+$/.test(v.target.value)){
+        listeDesIngredients.forEach(ingredient =>currentIngredients.push(ingredient));
+        createFiltreForDisplay(v, currentIngredients, name.ingredient);
+    }else{
+        saisieIngredients.value="";
+    }
+    
 
 });
 saisieAppareil.addEventListener('keyup', function(v){
+    if(/[a-zA-Z]+$/.test(v.target.value)){
+        listeDesAppareils.forEach(appareil=>currentAppareils.push(appareil))
     createFiltreForDisplay(v, currentAppareils, name.appareils);
+    }else{
+        saisieAppareil.value="";
+    }
 
 });
 saisieUstensiles.addEventListener('keyup', function(v){
-        createFiltreForDisplay(v,currrentUstensiles, name.ustensiles)
+    if(/[a-zA-Z]+$/.test(v.target.value)){
+        listeDesUstensiles.forEach(appareil=>currentUstensiles.push(appareil))
+               createFiltreForDisplay(v,currentUstensiles, name.ustensiles)
+    }else{
+        saisieUstensiles.value="";
+    }
+ 
 });

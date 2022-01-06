@@ -153,7 +153,9 @@
 }
 
 button {
-  margin-right: 5%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-left: 2%;
   border: none;
   background-color: transparent;
   color: ghostwhite;
