@@ -12,7 +12,11 @@ export function filtreRecette() {
     //Y at'il un champ saisie dans la recherche générale ? 
     
     if (currentGeneralFilter.length > 2) {
-        console.time("fonction tri 1 ");
+        let ms=0;
+
+        //On va implementer une boucle pour gerer qui est le plus rapide sur 100000 fois. 
+        for(let i=0; i<100000; i++){
+        var start = window.performance.now()
         var listeASupprimer =[];
         var currentValue = currentGeneralFilter.toLowerCase();
             for(let i=0; i<_newFiltredListe.length;i++){
@@ -24,7 +28,10 @@ export function filtreRecette() {
                 }
 
         }
-      console.timeEnd("fonction tri 1 ");  
+        var end = window.performance.now();
+        ms += end-start;
+    }
+    console.log('La moyenne est de ${ms/100000}' +ms/100000)
     };
     //Y'a t'il des filtres dans les filtres ingrédients ? 
     if (currentIngredientsFilters.length > 0) {
