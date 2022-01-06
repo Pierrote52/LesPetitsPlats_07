@@ -39,27 +39,6 @@ export function filtreRecette() {
                 }
 
         }
-
-        // let recette = currentListe.find((element)=>{return element.nom.toLowerCase().includes(value.toLowerCase())});
-        // for(var [key,value] of newMapList){
-        //     var supprimerElement=true;
-        // value.forEach((elem)=>{
-        //     if(elem.includes(currentValue)){
-        //       supprimerElement =false
-        //     }
-        // });
-        // if(supprimerElement){
-        //     listeASupprimer.push(key);
-        // }
-        // }
-        // //Supprimer par la liste.
-        // for(let i=0; i<_newFiltredListe.length;i++){
-        //     if(listeASupprimer.includes(_newFiltredListe[i].id)){
-        //         _newFiltredListe.splice(i, 1);
-        //         i-=1;
-        //     }
-        // }
-
       console.timeEnd("fonction tri 1 ");  
     };
     //Y'a t'il des filtres dans les filtres ingrédients ? 
