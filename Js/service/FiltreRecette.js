@@ -25,14 +25,15 @@ export function filtreRecette() {
 // };
     
     //Y at'il un champ saisie dans la recherche générale ? 
+    
     if (currentGeneralFilter.length > 2) {
+        console.time("fonction tri 1 ");
         var listeASupprimer =[];
         var currentValue = currentGeneralFilter.toLowerCase();
         //     for(let i=0; i<_newFiltredListe.length;i++){
-        //         if(_newFiltredListe[i].description.toLowerCase().includes(value)||_newFiltredListe[i].ustensils.includes(value)||_newFiltredListe[i].appliance.toLowerCase().includes(value)||_newFiltredListe[i].nom.toLowerCase().includes(value)){
+        //         if(_newFiltredListe[i].description.toLowerCase().includes(currentValue)||_newFiltredListe[i].ustensils.includes(currentValue)||_newFiltredListe[i].appliance.toLowerCase().includes(currentValue)||_newFiltredListe[i].nom.toLowerCase().includes(currentValue)){
 
         //         }else{
-        //             var index = _newFiltredListe.indexOf(e);
         //            _newFiltredListe.splice(i,1);
         //            i-=1;
         //         }
@@ -59,7 +60,7 @@ export function filtreRecette() {
             }
         }
 
-        
+      console.timeEnd("fonction tri 1 ");  
     };
     //Y'a t'il des filtres dans les filtres ingrédients ? 
     if (currentIngredientsFilters.length > 0) {
