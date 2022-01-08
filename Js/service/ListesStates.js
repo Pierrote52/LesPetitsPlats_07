@@ -7,7 +7,7 @@ export function currentListeState(liste){
     for(let e of liste ){
         currentListe.push(e);
     }
-    console.log('CurrentListe à jour ! ')
+  
 }
 
 
