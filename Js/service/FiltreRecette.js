@@ -8,10 +8,7 @@ export function filtreRecette() {
     for(var e of listeRecipes){
         _newFiltredListe.push(e)
     }
-    
     //Y at'il un champ saisie dans la recherche générale ? 
-        for(let i=0; i<100000; i++){
-        var start = window.performance.now()
         var listeASupprimer =[];
         var currentValue = currentGeneralFilter.toLowerCase();
             for(let i=0; i<_newFiltredListe.length;i++){
@@ -23,7 +20,6 @@ export function filtreRecette() {
                 }
 
         }
-    };
     //Y'a t'il des filtres dans les filtres ingrédients ? 
     if (currentIngredientsFilters.length > 0) {
         for (var CIF of currentIngredientsFilters) {
