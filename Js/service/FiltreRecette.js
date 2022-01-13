@@ -9,8 +9,6 @@ export function filtreRecette() {
         _newFiltredListe.push(e)
     }
         //Y-a-t-il une valeure présqente dans le input de recherche globale ? 
-    for (let i = 0; i < 100000; i++) {
-        var start = window.performance.now();
         var listeASupprimer = [];
         var currentValue = currentGeneralFilter.toLowerCase();
         for (var [key, value] of newMapList) {
@@ -31,7 +29,6 @@ export function filtreRecette() {
                 i -= 1;
             }
         }
-    };
     //Y'a t'il des filtres dans les filtres ingrédients ? 
     if (currentIngredientsFilters.length > 0) {
         for (var CIF of currentIngredientsFilters) {
